@@ -1,5 +1,6 @@
 import React from 'react'
 import { Box } from "@chakra-ui/react"
+import bg from '../images/homebg.png';
 
 import moon from '../images/moon.jpg'
 import uranus from '../images/uranus.jpg'
@@ -35,7 +36,7 @@ class Postpage extends React.Component {
             if(randInt==0){
                 return(
                     <Box>
-                        <h1 className="title">"Not Actually Loading...Get PRANKED!!!"</h1>
+                        <h1 className="title2">"Not Actually Loading...Get PRANKED!!!"</h1>
                         <Box className="quizIconCentered" w="50%" h="50%">
                                     <img alt="Uranus" src={uranus} />
                         </Box>
@@ -47,7 +48,7 @@ class Postpage extends React.Component {
             else if(randInt!=0){
                 return(
                     <Box>
-                        <h1 className="title">"Loading..."</h1>
+                        <h1 className="title2">"Loading..."</h1>
                         <Box className="quizIconCentered" w="50%" h="50%">
                                     <img alt="Moon" src={moon} />
                         </Box>
@@ -62,14 +63,13 @@ class Postpage extends React.Component {
 
         else{
             return(
-                <Box>
-                    <div id="app"></div>
+                <Box backgroundImage={bg} backgroundColor= "Black">
                     <Box className="containerAcross">  
                         <Box className="quizIcon" w="15%" h="10%">
                                 <img alt="Moon" src={moon} />
                         </Box>
                         <Box>
-                            <h1 className="title">Nintendo Music Page</h1>
+                            <h1 className="title2">Nintendo Music Page</h1>
                         </Box>
                     </Box>
                     
@@ -96,32 +96,32 @@ class Postpage extends React.Component {
     
     
                             <Box className="containerDown">{/* Statbox */}
-                                <Box  ml="50px" w="400px" h="50px" bg='Black'>  {/* leaderboards Heading*/}
+                                <Box  ml="50px" w="400px" h="50px" bg='gray'>  {/* leaderboards Heading*/}
                                     <h1 class="board-title">Quiz Leaderboards</h1>
                                 </Box>
                                 <Box  ml="50px" w="400px" h="450px" bg='#D3D3D3'>  {/* leaderboards*/}
                                     <Box mb="26px" display="flex" alignItems="center" justifyContent="space-between">
                                         <Box>
-                                            <h2>1.  <img src={moon} alt="moon" class="round"/> {this.state.bleh[0]} Quiz Leaderboards</h2>
+                                            <h2 className="text">1.  <img src={moon} alt="moon" class="round"/> {this.state.bleh[0]} Quiz Leaderboards</h2>
                                         </Box>
                                         <Box>
-                                            <h2>{this.state.score[0]}</h2>
-                                        </Box>
-                                    </Box>
-                                    <Box mb="26px" display="flex" alignItems="center" justifyContent="space-between">
-                                        <Box>
-                                            <h2>2.  <img src={moon} alt="moon" class="round"/> {this.state.bleh[1]} Quiz Leaderboards</h2>
-                                        </Box>
-                                        <Box>
-                                            <h2>{this.state.score[1]}</h2>
+                                            <h2 className="text">{this.state.score[0]}</h2>
                                         </Box>
                                     </Box>
                                     <Box mb="26px" display="flex" alignItems="center" justifyContent="space-between">
                                         <Box>
-                                            <h2>3.  <img src={moon} alt="moon" class="round"/> {this.state.bleh[2]} Quiz Leaderboards</h2>
+                                            <h2 className="text">2.  <img src={moon} alt="moon" class="round"/> {this.state.bleh[1]} Quiz Leaderboards</h2>
                                         </Box>
                                         <Box>
-                                            <h2>{this.state.score[2]}</h2>
+                                            <h2 className="text">{this.state.score[1]}</h2>
+                                        </Box>
+                                    </Box>
+                                    <Box mb="26px" display="flex" alignItems="center" justifyContent="space-between">
+                                        <Box>
+                                            <h2 className="text">3.  <img src={moon} alt="moon" class="round"/> {this.state.bleh[2]} Quiz Leaderboards</h2>
+                                        </Box>
+                                        <Box>
+                                            <h2 className="text">{this.state.score[2]}</h2>
                                         </Box>
                                     </Box>
                                     <Box mb="26px" display="flex" alignItems="center" justifyContent="space-between">
@@ -129,39 +129,39 @@ class Postpage extends React.Component {
                                             <h2 >4.  <img src={moon} alt="moon" class="round"/>  {this.state.bleh[3]} Quiz Leaderboards</h2>
                                         </Box>
                                         <Box>
-                                            <h2>{this.state.score[3]}</h2>
+                                            <h2 className="text">{this.state.score[3]}</h2>
                                         </Box>
                                     </Box>
                                     <Box mb="26px" display="flex" alignItems="center" justifyContent="space-between">
                                         <Box>
-                                            <h2 >5.  <img src={moon} alt="moon" class="round"/>  {this.state.bleh[4]} Quiz Leaderboards</h2>
+                                            <h2 className="text" >5.  <img src={moon} alt="moon" class="round"/>  {this.state.bleh[4]} Quiz Leaderboards</h2>
                                         </Box>
                                         <Box>
-                                            <h2>{this.state.score[4]}</h2>
-                                        </Box>
-                                    </Box>
-                                    <Box mb="26px" display="flex" alignItems="center" justifyContent="space-between">
-                                        <Box>
-                                            <h2 >6.  <img src={moon} alt="moon" class="round"/>  {this.state.bleh[5]} Quiz Leaderboards</h2>
-                                        </Box>
-                                        <Box>
-                                            <h2>{this.state.score[5]}</h2>
+                                            <h2 className="text">{this.state.score[4]}</h2>
                                         </Box>
                                     </Box>
                                     <Box mb="26px" display="flex" alignItems="center" justifyContent="space-between">
                                         <Box>
-                                            <h2 >7.  <img src={moon} alt="moon" class="round"/>  {this.state.bleh[6]} Quiz Leaderboards</h2>
+                                            <h2 className="text" >6.  <img src={moon} alt="moon" class="round"/>  {this.state.bleh[5]} Quiz Leaderboards</h2>
                                         </Box>
                                         <Box>
-                                            <h2>{this.state.score[6]}</h2>
+                                            <h2 className="text">{this.state.score[5]}</h2>
+                                        </Box>
+                                    </Box>
+                                    <Box mb="26px" display="flex" alignItems="center" justifyContent="space-between">
+                                        <Box>
+                                            <h2 className="text" >7.  <img src={moon} alt="moon" class="round"/>  {this.state.bleh[6]} Quiz Leaderboards</h2>
+                                        </Box>
+                                        <Box>
+                                            <h2 className="text">{this.state.score[6]}</h2>
                                         </Box>
                                     </Box>
                                     <Box  mb="26px" display="flex" alignItems="center" justifyContent="space-between">
                                         <Box>
-                                            <h2 >8.  <img src={moon} alt="moon" class="round"/>  {this.state.bleh[7]} Quiz Leaderboards</h2>
+                                            <h2 className="text" >8.  <img src={moon} alt="moon" class="round"/>  {this.state.bleh[7]} Quiz Leaderboards</h2>
                                         </Box>
                                         <Box>
-                                            <h2>{this.state.score[7]}</h2>
+                                            <h2 className="text">{this.state.score[7]}</h2>
                                         </Box>
                                     </Box>
                                 </Box>

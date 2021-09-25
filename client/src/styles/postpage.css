@@ -19,17 +19,24 @@
 
 .center.button.white{
     font-size:25px;
+    font-family:monospace;
+    
     color:white;
 }
 .center.button.black{
     font-size:25px;
+    font-family:monospace;
 }
 
-.title {
-    font-family: "Roboto";
+.title2 {
+    color:white;
+    font-family:monospace;
     font-size:90px;
 }
 
+.text{
+    font-family:monospace;
+}
 
 .hr{
     color: black;
@@ -51,11 +58,12 @@ background-color: black;
   }
 
   .board-title{
-    color:white;
+    
     display:flex;
     align-items: center;
     justify-content: center;
     font-size:30px;
+    font-family:monospace;
   }
 
   .round{
