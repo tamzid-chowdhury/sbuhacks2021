@@ -2,6 +2,8 @@ import { ChakraProvider } from "@chakra-ui/react"
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Homepage from "./pages/Homepage"
 import Postpage from "./pages/Postpage"
+import QuizTakingPage from "./pages/QuizTakingPage";
+import TestingPage from "./pages/TestingPage";
 
 function App() {
   return (
@@ -16,12 +18,15 @@ function App() {
             <Postpage />
           </Route>
           
-        </Switch>
+          <Route path="/quiztaking">
+            <QuizTakingPage />
+          </Route>
 
-        <Switch>
-          
-        </Switch>
+          <Route path="/testingpage">
+            <TestingPage />
+          </Route>
 
+        </Switch>
 
       </Router>
     </ChakraProvider>
