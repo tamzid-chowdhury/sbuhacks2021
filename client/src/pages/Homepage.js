@@ -10,7 +10,7 @@ export default function Homepage() {
   if (!pulledData) {
     fetch('/api/quizs')
       .then((res) => res.json())
-      .then((data) => console.log(data[0].name));
+      .then((data) => console.log(data));
     pulledData = true;
   }
   return (
