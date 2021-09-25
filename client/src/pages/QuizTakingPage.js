@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Box, Center, Text, Grid, VStack, Button } from "@chakra-ui/react"
+import { Box, Center, Text, Grid, VStack, Button, Image } from "@chakra-ui/react"
 import { useLocation } from 'react-router-dom'
 
 export default function QuizTakingPage( {} ) {
@@ -12,6 +12,7 @@ export default function QuizTakingPage( {} ) {
 
     const [questionNum, setQuestionNum] = useState(1)
     const [selectedAnswer, setSelectedAnswer] = useState(-1)
+    const [numCorrect, setNumCorrect] = useState(0)
 
     const answerColor = "blue.300"
     const hoverColor = "blue.200"
@@ -19,6 +20,9 @@ export default function QuizTakingPage( {} ) {
 
     const nextQuestion = () => {
         if(questionNum !== numQuestions){
+            if(correctAnswers[questionNum-1] === answers[questionNum-1][selectedAnswer])
+                setNumCorrect(numCorrect+1)
+
             setQuestionNum(questionNum+1)
             setSelectedAnswer(-1)
         }
@@ -33,15 +37,15 @@ export default function QuizTakingPage( {} ) {
     }
    
     return (
-        <Box>
+        <Box bgColor="gray.800" height="100vh">
+            <Text ml="3" fontSize="20" color="gray.100">Correct Answers: {numCorrect}/{numQuestions}</Text>
             <Center>
                 <VStack w="50%">
                     <Box>
-                        <Text fontSize="40" fontWeight="bold">
+                        <Text fontSize="40" fontWeight="bold" color="gray.100">
                             {questionNum}. {questions[questionNum-1]}
                         </Text>
                     </Box>
-                
                     <Grid w="100%" templateRows ="1fr 1fr 1fr 1fr 1fr" h="350px">
                         <Button bgColor={selectedAnswer === 0 ? selectedColor : answerColor} onClick={() => setSelectedAnswer(0)} _hover={{bgColor: selectedAnswer === 0 ? selectedColor : hoverColor }} h="50">{answers[questionNum-1][0]}</Button>
                         <Button bgColor={selectedAnswer === 1 ? selectedColor : answerColor} onClick={() => setSelectedAnswer(1)} _hover={{bgColor: selectedAnswer === 1 ? selectedColor : hoverColor}} h="50">{answers[questionNum-1][1]}</Button>
