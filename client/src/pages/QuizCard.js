@@ -6,7 +6,7 @@ import '../styles/homepage.css';
 
 function QuizCard(props) {
     return ( 
-        <Box w='300px' h='180px' rounded='10px' overflow='hidden' boxShadow='large' bg='grey'>
+        <Box w='300px' h='180px' rounded='10px' overflow='hidden' boxShadow='large' bg='gray.600' _hover={{opacity:"80%"}}>
             <Image src={props.image} h='160px' w='300px'></Image>
             <Box p={1} className='cardinfo'>
                 <p1>{props.title}</p1>
