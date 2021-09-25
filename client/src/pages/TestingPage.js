@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom'
 import { Box, Center, Text, Grid, VStack, Button } from "@chakra-ui/react"
 import { quizData } from '../quizData'
 
+/* TEST PAGE: TO BE REMOVED LATER
+        - Use this format to link quizzes on the homepage    
+*/
 export default function TestingPage( {} ) {
     return (
         <Box>
