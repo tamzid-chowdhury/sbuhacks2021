@@ -9,12 +9,27 @@ export default function QuizTakingPage( {} ) {
     const answers = location.state?.answers
     const numQuestions = location.state?.numQuestions
     const correctAnswers = location.state?.correctAnswers
-    
-    const [questionNum, setQuestionNum] = useState(1);
+
+    const [questionNum, setQuestionNum] = useState(1)
+    const [selectedAnswer, setSelectedAnswer] = useState(-1)
+
+    const answerColor = "blue.300"
+    const hoverColor = "blue.200"
+    const selectedColor = "orange.200"
 
     const nextQuestion = () => {
-        if(questionNum !== numQuestions)
+        if(questionNum !== numQuestions){
             setQuestionNum(questionNum+1)
+            setSelectedAnswer(-1)
+        }
+    }
+
+    const renderNextQuestionButton = () => {
+        if(selectedAnswer === -1)
+            return <Button w="50%" bgColor="gray.300" _hover={{bgColor:"gray.300"}}>Next Question</Button>
+
+        else 
+            return <Button w="50%" bgColor="green.300" onClick={() => nextQuestion()} _hover={{bgColor:"green.200"}}>Next Question</Button>
     }
    
     return (
@@ -26,12 +41,13 @@ export default function QuizTakingPage( {} ) {
                             {questionNum}. {questions[questionNum-1]}
                         </Text>
                     </Box>
-
-                    <Grid w="100%" templateRows ="1fr 1fr 1fr 1fr" h="300px">
-                        <Button bgColor="red.300" onClick={() => nextQuestion()} h="50">{answers[questionNum-1][0]}</Button>
-                        <Button bgColor="blue.300" onClick={() => nextQuestion()} h="50">{answers[questionNum-1][1]}</Button>
-                        <Button bgColor="green.300" onClick={() => nextQuestion()} h="50">{answers[questionNum-1][2]}</Button>
-                        <Button bgColor="yellow.300" onClick={() => nextQuestion()} h="50">{answers[questionNum-1][3]}</Button>
+                
+                    <Grid w="100%" templateRows ="1fr 1fr 1fr 1fr 1fr" h="350px">
+                        <Button bgColor={selectedAnswer === 0 ? selectedColor : answerColor} onClick={() => setSelectedAnswer(0)} _hover={{bgColor: selectedAnswer === 0 ? selectedColor : hoverColor }} h="50">{answers[questionNum-1][0]}</Button>
+                        <Button bgColor={selectedAnswer === 1 ? selectedColor : answerColor} onClick={() => setSelectedAnswer(1)} _hover={{bgColor: selectedAnswer === 1 ? selectedColor : hoverColor}} h="50">{answers[questionNum-1][1]}</Button>
+                        <Button bgColor={selectedAnswer === 2 ? selectedColor : answerColor} onClick={() => setSelectedAnswer(2)} _hover={{bgColor: selectedAnswer === 2 ? selectedColor : hoverColor}} h="50">{answers[questionNum-1][2]}</Button>
+                        <Button bgColor={selectedAnswer === 3 ? selectedColor : answerColor} onClick={() => setSelectedAnswer(3)} _hover={{bgColor: selectedAnswer === 3 ? selectedColor : hoverColor}} h="50">{answers[questionNum-1][3]}</Button>
+                        <Center>{renderNextQuestionButton()}</Center>
                     </Grid>
                 </VStack>
             </Center>

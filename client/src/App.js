@@ -4,6 +4,7 @@ import Homepage from "./pages/Homepage"
 import Postpage from "./pages/Postpage"
 import QuizTakingPage from "./pages/QuizTakingPage";
 import TestingPage from "./pages/TestingPage";
+import QuizCard from "./pages/QuizCard";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
           <Route path="/testingpage">
             <TestingPage />
           </Route>
-
+          
         </Switch>
 
       </Router>

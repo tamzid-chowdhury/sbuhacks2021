@@ -10,3 +10,57 @@
     font-size: 20px;
     color: white; 
 }
+
+.alignRight {
+  float: right;
+  
+}
+
+.title {
+  position: absolute;
+  top: 125px;
+  left: 610px;
+  font-family: monospace;
+  font-size: 72px;
+  color: white;
+}
+
+.subtitle1 {
+  position: absolute;
+  top: 235px;
+  left: 430px;
+  font-family: monospace;
+  font-size: 30px;
+  color: white;
+}
+
+.subtitle2 {
+  position: absolute;
+  top: 550px;
+  left: 500px;
+  font-family: monospace;
+  font-size: 24px;
+  color: white;
+}
+
+.quizcards{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  top: 315px;
+  left: 280px;
+}
+
+.cardinfo{
+  color: white;
+  font-family: monospace;
+  text-align: center;
+  line-height: 13px;
+}
+
+.finalquizcard{
+  position: absolute;
+  top: 610px;
+  left: 745px;
+}
