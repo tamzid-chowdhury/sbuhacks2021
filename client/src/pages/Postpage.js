@@ -9,7 +9,12 @@ class Postpage extends React.Component {
     constructor(props) {
         super(props);
         // Don't call this.setState() here!
-        this.state = { pulledData: false };
+        this.state = { 
+            pulledData: false,
+            bleh: ["alpha","vita","gamma","thelta","epsilon","zita","ita","thita"],
+            score: ["5","5","4","4","3","3","2","2"]
+        
+        };
         //this.handleClick = this.handleClick.bind(this);
       }
 
@@ -24,7 +29,7 @@ class Postpage extends React.Component {
       }
 
     render() {
-        if(this.state.pulledData===false){ //Waits indefinitely for the data
+        if(this.state.pulledData===true){ //Waits indefinitely for the data, change to true to get the real page
             var max = 5
             var randInt = Math.floor(Math.random() * max);
             if(randInt==0){
@@ -54,7 +59,6 @@ class Postpage extends React.Component {
             }
             
         }
-
 
         else{
             return(
@@ -87,22 +91,91 @@ class Postpage extends React.Component {
                             <Box mt="50px" w="500px" h="350px" bg='gray'>  {/* Gradebox */}
                                 <h2></h2>
                             </Box>
-                            <Box  mt="50px" w="400px" h="350px" bg='#A9A9A9'>  {/* for horizontal line*/}
+                            <Box  mt="50px" w="400px" h="350px" bg='#D3D3D3'>  {/* for horizontal line*/}
                             </Box>
     
     
                             <Box className="containerDown">{/* Statbox */}
-                                <Box  ml="50px" w="400px" h="50px" bg='Black'>  {/* leaderboards*/}
+                                <Box  ml="50px" w="400px" h="50px" bg='Black'>  {/* leaderboards Heading*/}
+                                    <h1 class="board-title">Quiz Leaderboards</h1>
                                 </Box>
-                                <Box  ml="50px" w="400px" h="450px" bg='#A9A9A9'>  {/* leaderboards*/}
+                                <Box  ml="50px" w="400px" h="450px" bg='#D3D3D3'>  {/* leaderboards*/}
+                                    <Box mb="26px" display="flex" alignItems="center" justifyContent="space-between">
+                                        <Box>
+                                            <h2>1.  <img src={moon} alt="moon" class="round"/> {this.state.bleh[0]} Quiz Leaderboards</h2>
+                                        </Box>
+                                        <Box>
+                                            <h2>{this.state.score[0]}</h2>
+                                        </Box>
+                                    </Box>
+                                    <Box mb="26px" display="flex" alignItems="center" justifyContent="space-between">
+                                        <Box>
+                                            <h2>2.  <img src={moon} alt="moon" class="round"/> {this.state.bleh[1]} Quiz Leaderboards</h2>
+                                        </Box>
+                                        <Box>
+                                            <h2>{this.state.score[1]}</h2>
+                                        </Box>
+                                    </Box>
+                                    <Box mb="26px" display="flex" alignItems="center" justifyContent="space-between">
+                                        <Box>
+                                            <h2>3.  <img src={moon} alt="moon" class="round"/> {this.state.bleh[2]} Quiz Leaderboards</h2>
+                                        </Box>
+                                        <Box>
+                                            <h2>{this.state.score[2]}</h2>
+                                        </Box>
+                                    </Box>
+                                    <Box mb="26px" display="flex" alignItems="center" justifyContent="space-between">
+                                        <Box>
+                                            <h2 >4.  <img src={moon} alt="moon" class="round"/>  {this.state.bleh[3]} Quiz Leaderboards</h2>
+                                        </Box>
+                                        <Box>
+                                            <h2>{this.state.score[3]}</h2>
+                                        </Box>
+                                    </Box>
+                                    <Box mb="26px" display="flex" alignItems="center" justifyContent="space-between">
+                                        <Box>
+                                            <h2 >5.  <img src={moon} alt="moon" class="round"/>  {this.state.bleh[4]} Quiz Leaderboards</h2>
+                                        </Box>
+                                        <Box>
+                                            <h2>{this.state.score[4]}</h2>
+                                        </Box>
+                                    </Box>
+                                    <Box mb="26px" display="flex" alignItems="center" justifyContent="space-between">
+                                        <Box>
+                                            <h2 >6.  <img src={moon} alt="moon" class="round"/>  {this.state.bleh[5]} Quiz Leaderboards</h2>
+                                        </Box>
+                                        <Box>
+                                            <h2>{this.state.score[5]}</h2>
+                                        </Box>
+                                    </Box>
+                                    <Box mb="26px" display="flex" alignItems="center" justifyContent="space-between">
+                                        <Box>
+                                            <h2 >7.  <img src={moon} alt="moon" class="round"/>  {this.state.bleh[6]} Quiz Leaderboards</h2>
+                                        </Box>
+                                        <Box>
+                                            <h2>{this.state.score[6]}</h2>
+                                        </Box>
+                                    </Box>
+                                    <Box  mb="26px" display="flex" alignItems="center" justifyContent="space-between">
+                                        <Box>
+                                            <h2 >8.  <img src={moon} alt="moon" class="round"/>  {this.state.bleh[7]} Quiz Leaderboards</h2>
+                                        </Box>
+                                        <Box>
+                                            <h2>{this.state.score[7]}</h2>
+                                        </Box>
+                                    </Box>
                                 </Box>
                             </Box>
                         </Box>
                         <Box h="60px"></Box>
     
                         <Box className="containerAcross">
-                            <Box  ml="250px" w="200px" h="40px" bg='gray'></Box>  {/* for horizontal line*/}
-                            <Box  ml="5px" w="200px" h="40px" bg='#A9A9A9'></Box>  {/* for horizontal line*/}
+                            <Box  ml="250px" w="200px" h="40px" bg='gray'>{/* for horizontal line*/}
+                                <h3 className="center button white">View Results</h3>    
+                            </Box>  
+                            <Box  ml="5px" w="200px" h="40px" bg='#D3D3D3'> {/* for horizontal line*/}
+                                <h3 className="center button black">View Answers</h3>    
+                            </Box>  
                         </Box>
                         
                         <Box h="60px"></Box>

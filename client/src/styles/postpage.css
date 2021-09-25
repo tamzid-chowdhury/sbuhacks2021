@@ -17,6 +17,14 @@
     justify-content: center;
 }
 
+.center.button.white{
+    font-size:25px;
+    color:white;
+}
+.center.button.black{
+    font-size:25px;
+}
+
 .title {
     font-family: "Roboto";
     font-size:90px;
@@ -33,7 +41,29 @@ background-color: black;
     flex-direction: row;
   }
 
+  .containerAcrossStretch {
+    justify-content:space-between;
+  }
+
   .containerDown {
     display: flex; /* or inline-flex */
     flex-direction: column;
+  }
+
+  .board-title{
+    color:white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size:30px;
+  }
+
+  .round{
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 50%;
+    
   }
