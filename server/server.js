@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 const quizs = require('./routes/api/quizs');
+const users = require('./routes/api/users');
 
 const app = express();
 
@@ -20,6 +21,7 @@ mongoose
 
 // Use Routes
 app.use('/api/quizs', quizs);
+app.use('/api/users', users);
 
 const port = process.env.PORT || 5000;
 
