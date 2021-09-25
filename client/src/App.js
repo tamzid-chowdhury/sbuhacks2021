@@ -8,7 +8,9 @@ function App() {
     <ChakraProvider>
       <Router>
         <Switch>
-          <Route exact path={["/"]} component={Homepage} ></Route>
+          <Route exact path={["/"]}>
+            <Homepage />
+          </Route>
           
           <Route path="/post">
             <Postpage />
