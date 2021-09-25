@@ -12,10 +12,10 @@ function App() {
     <ChakraProvider>
       <Router>
         <Switch>
-          <Route exact path={['/']}>
+          {/* <Route exact path={['/']}>
             <LoginPage />
-          </Route>
-          <Route exact path={['/home']}>
+          </Route> */}
+          <Route exact path={['/']}>
             <Homepage />
           </Route>
 

@@ -58,13 +58,6 @@ export default function Homepage() {
       </div>
 
       <div className='quizcards' w='100%' h='250px'>
-        <QuizCard title={quiz1title} image={quiz1image}></QuizCard>
-
-        <QuizCard title={quiz2title} image={quiz2image}></QuizCard>
-
-        <QuizCard title={quiz3title} image={quiz3image}></QuizCard>
-
-        <QuizCard title={quiz4title} image={quiz4image}></QuizCard>
         <Link
           to={{
             pathname: '/quiztaking',
