@@ -30,40 +30,41 @@ class Postpage extends React.Component {
       }
 
     render() {
-        if(this.state.pulledData===true){ //Waits indefinitely for the data, change to true to get the real page
+        if(this.state.pulledData===false){ //Waits indefinitely for the data, change to true to get the real page
             var max = 5
             var randInt = Math.floor(Math.random() * max);
             if(randInt==0){
                 return(
-                    <Box>
+                    <Box backgroundImage={bg} backgroundColor= "Black" height="auto">
                         <h1 className="title2">"Not Actually Loading...Get PRANKED!!!"</h1>
                         <Box className="quizIconCentered" w="50%" h="50%">
                                     <img alt="Uranus" src={uranus} />
                         </Box>
-                        <h1 className="center">"Here's Uranus, where the alien race Uranium is from! Except I'm lying"</h1>
-                        <Box h="20px"></Box>
+                        <h1 className="center button white">"Here's Uranus, where the alien race Uranium is from! Except I'm lying"</h1>
                     </Box>);
                     //Displays a loading screen while it waits
             }
             else if(randInt!=0){
                 return(
-                    <Box>
-                        <h1 className="title2">"Loading..."</h1>
-                        <Box className="quizIconCentered" w="50%" h="50%">
-                                    <img alt="Moon" src={moon} />
+                        <Box backgroundImage={bg} backgroundColor= "Black" height="auto">
+                            <h1 className="title2">"Loading..."</h1>
+                            <Box className="quizIconCentered" w="50%" h="50%">
+                                        <img alt="Moon" src={moon} />
+                            </Box>
+                            <h1 className="center button white">"Here's a picuture of the moon while you wait!"</h1>
+                            <Box h="200px">
+                            </Box>
                         </Box>
-                        <h1 className="center">"Here's a picuture of the moon while you wait!"</h1>
-                        <Box h="20px"></Box>
-                    </Box>);
-                    //Displays a loading screen while it waits
-
+                        
+                   //Displays a loading screen while it waits
+                );
             }
-            
         }
 
         else{
             return(
-                <Box backgroundImage={bg} backgroundColor= "Black">
+                <html>
+                <Box height="100%" backgroundImage={bg} backgroundColor= "Black">
                     <Box className="containerAcross">  
                         <Box className="quizIcon" w="15%" h="10%">
                                 <img alt="Moon" src={moon} />
@@ -183,6 +184,7 @@ class Postpage extends React.Component {
                     
                     
                 </Box>
+                </html>
             );
         }
         
