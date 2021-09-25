@@ -9,7 +9,7 @@ class Postpage extends React.Component {
     render() {
         return(
             <Box>
-                <Box className="container">
+                <Box className="container">  
                     <Box className="quizIcon" w="15%" h="10%">
                             <img alt="Moon" src={moon} />
                     </Box>
@@ -28,55 +28,29 @@ class Postpage extends React.Component {
 
 
                 <Box className="containerDown">
-                    <Box className="container">
-                        <Box w="85%">  {/* for horizontal line*/}
-                        </Box>
-
-                    </Box>
-
-
                     <Box h="10px"></Box> {/* Can move everything down a little*/}
                     <Box className="container">
-                        <Box mr ="20px" w="20px" >  {/* added space*/}
-                                    
+                        <Box mr ="20px" w="20px" >  {/* added space on the left side*/}
                         </Box>
 
-                        <Box className="containerDown"> {/* Gradebox*/}
-                            <Box  h="50px" >  
-                            </Box>
-                            <Box  w="500px" h="350px" bg='gray'>  
-                            </Box>
-
+                        <Box mt="50px" w="500px" h="350px" bg='gray'>  {/* Gradebox */}
                         </Box>
-                        
+                        <Box  mt="50px" w="400px" h="350px" bg='#A9A9A9'>  {/* for horizontal line*/}
+                        </Box>
+
 
                         <Box className="containerDown">{/* Statbox */}
-                            <Box  h="50px" >  
+                            <Box  ml="50px" w="400px" h="50px" bg='Black'>  {/* leaderboards*/}
                             </Box>
-                            <Box  w="400px" h="350px" bg='#A9A9A9'>  {/* for horizontal line*/}
+                            <Box  ml="50px" w="400px" h="450px" bg='#A9A9A9'>  {/* leaderboards*/}
                             </Box>
-
-                        </Box>
-                        
-                        <Box className="containerDown">{/* Statbox */}
-                        <Box  w="50px" >  {/* now for the right section*/}
-                        </Box>
-                        </Box>
-
-                        <Box className="containerDown">{/* Statbox */}
-                        <Box  w="400px" h="50px" bg='Black'>  {/* leaderboards*/}
-                        </Box>
-                        <Box  w="400px" h="450px" bg='#A9A9A9'>  {/* leaderboards*/}
-                        </Box>
                         </Box>
                     </Box>
                     <Box h="60px"></Box>
 
                     <Box className="container">
-                        <Box w="250px"></Box>
-                        <Box  w="200px" h="40px" bg='gray'></Box>  {/* for horizontal line*/}
-                        <Box w="5px"></Box>
-                        <Box  w="200px" h="40px" bg='#A9A9A9'></Box>  {/* for horizontal line*/}
+                        <Box  ml="250px" w="200px" h="40px" bg='gray'></Box>  {/* for horizontal line*/}
+                        <Box  ml="5px" w="200px" h="40px" bg='#A9A9A9'></Box>  {/* for horizontal line*/}
                     </Box>
                     
                     <Box h="60px"></Box>
