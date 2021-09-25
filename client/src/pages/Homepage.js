@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Box, Grid, GridItem } from '@chakra-ui/react';
 import QuizCard from '../pages/QuizCard';
 import QuizTakingPage from './QuizTakingPage';
+import { quizData } from '../quizData';
 
 import '../styles/homepage.css';
 
@@ -63,6 +65,61 @@ export default function Homepage() {
         <QuizCard title={quiz3title} image={quiz3image}></QuizCard>
 
         <QuizCard title={quiz4title} image={quiz4image}></QuizCard>
+        <Link
+          to={{
+            pathname: '/quiztaking',
+            state: {
+              numQuestions: quizData.quiz1.numQuestions,
+              questions: quizData.quiz1.questions,
+              answers: quizData.quiz1.answers,
+              correctAnswers: quizData.quiz1.correctAnswers,
+            },
+          }}
+        >
+          <QuizCard title={quiz1title} image={quiz1image}></QuizCard>
+        </Link>
+
+        <Link
+          to={{
+            pathname: '/quiztaking',
+            state: {
+              numQuestions: quizData.quiz2.numQuestions,
+              questions: quizData.quiz2.questions,
+              answers: quizData.quiz2.answers,
+              correctAnswers: quizData.quiz2.correctAnswers,
+            },
+          }}
+        >
+          <QuizCard title={quiz2title} image={quiz2image}></QuizCard>
+        </Link>
+
+        <Link
+          to={{
+            pathname: '/quiztaking',
+            state: {
+              numQuestions: quizData.quiz3.numQuestions,
+              questions: quizData.quiz3.questions,
+              answers: quizData.quiz3.answers,
+              correctAnswers: quizData.quiz3.correctAnswers,
+            },
+          }}
+        >
+          <QuizCard title={quiz3title} image={quiz3image}></QuizCard>
+        </Link>
+
+        <Link
+          to={{
+            pathname: '/quiztaking',
+            state: {
+              numQuestions: quizData.quiz4.numQuestions,
+              questions: quizData.quiz4.questions,
+              answers: quizData.quiz4.answers,
+              correctAnswers: quizData.quiz4.correctAnswers,
+            },
+          }}
+        >
+          <QuizCard title={quiz4title} image={quiz4image}></QuizCard>
+        </Link>
       </div>
 
       <div className='subtitle2' w='300px' h='400px'>

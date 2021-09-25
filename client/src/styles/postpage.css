@@ -17,11 +17,26 @@
     justify-content: center;
 }
 
-.title {
-    font-family: "Roboto";
+.center.button.white{
+    font-size:25px;
+    font-family:monospace;
+    
+    color:white;
+}
+.center.button.black{
+    font-size:25px;
+    font-family:monospace;
+}
+
+.title2 {
+    color:white;
+    font-family:monospace;
     font-size:90px;
 }
 
+.text{
+    font-family:monospace;
+}
 
 .hr{
     color: black;
@@ -33,7 +48,30 @@ background-color: black;
     flex-direction: row;
   }
 
+  .containerAcrossStretch {
+    justify-content:space-between;
+  }
+
   .containerDown {
     display: flex; /* or inline-flex */
     flex-direction: column;
+  }
+
+  .board-title{
+    
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size:30px;
+    font-family:monospace;
+  }
+
+  .round{
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 50%;
+    
   }
